@@ -1,0 +1,11 @@
+import "@/assets/styles/globals.css";
+
+// ROOT LAYOUT
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
