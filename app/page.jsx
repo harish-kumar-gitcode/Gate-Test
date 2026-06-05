@@ -25,6 +25,10 @@ import mentorship from "@/assets/images/mentorship.png";
 
 // Components
 import Feature from "@/components/feat";
+import Scholar from "@/components/scholar";
+import Batch from "@/components/batch";
+import Testimonials from "@/components/testimonials";
+import About from "@/components/about";
 
 export default function HomePage() {
   return (
@@ -275,6 +279,178 @@ export default function HomePage() {
               </SwiperSlide>
             </Swiper>
           </div>
+        </div>
+
+        {/* Access Features */}
+        <div className="bg-blue-50 text-center">
+          {/* Access heading */}
+          <div>
+            <h1 className="text-md pt-10 font-medium">GATE COACHING</h1>
+            <h1 className="text-3xl font-bold w-80 mx-10">
+              ACCESS FROM YOUR HOME
+            </h1>
+          </div>
+          {/* Features list */}
+          <div className="grid grid-cols-3 grid-rows-10 mt-5">
+            {/* Header Row */}
+            <div className="content-center bg-white text-2xl font-semibold">
+              <h1>Features</h1>
+            </div>
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>GATE LIVE ONLINE 2027 (STARTER)</h1>
+            </div>
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>GATE LIVE ONLINE 2027 (PROFESSIONAL)</h1>
+            </div>
+            {/* Row 2 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Online Live Session</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>✔</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>✔</h1>
+            </div>
+            {/* Row 3 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Online Dedicated metorship</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>❌</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>✔</h1>
+            </div>
+            {/* Row 3 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Classroom Recorded Videos</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>✔</h1>
+            </div>
+            <div className="bg-gray-100 text-white border-white border text-sm content-center">
+              <h1>✔</h1>
+            </div>
+            {/* Row 4 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Total Session</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>600</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>800</h1>
+            </div>
+            {/* Row 5 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Gate Score Booster</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>❌</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>✔</h1>
+            </div>
+            {/* Row 6 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Post GATE Guidance</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>✔</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>✔</h1>
+            </div>
+            {/* Row 7 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>PSU and MS(R) mock Interview Prep</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>❌</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>✔</h1>
+            </div>
+            {/* Row 8 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Doubt Solving Session</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>12</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-sm content-center font-semibold">
+              <h1>24 (One to One)</h1>
+            </div>
+            {/* Row 9 */}
+            <div className="bg-blue-950 text-white border-white border text-sm content-center">
+              <h1>Price</h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-xl content-center font-bold">
+              <h1 className="text-green-800">
+                Rs 22,999 <br />
+                <span className="text-xs font-medium text-red-700">
+                  <strike>Rs 24,999</strike>
+                </span>
+              </h1>
+            </div>
+            <div className="bg-gray-100 text-black border-white border text-xl content-center font-bold">
+              <h1 className="text-green-800">
+                Rs 29,999 <br />
+                <span className="text-xs font-medium text-red-700">
+                  <strike>Rs 34,999</strike>
+                </span>
+              </h1>
+            </div>
+          </div>
+          <div className="text-gray-600 mx-4 mt-4 text-sm pb-2">
+            <p>
+              (2 Question Bank, One for Techincal and one for Math and GA would
+              be provided as pdf.)
+            </p>
+            <p>
+              <span className="font-semibold text-black">* </span>
+              An additonal charge of Rs 1299 would be applicable for Hard Copy
+              excluding Postal charges.
+            </p>
+          </div>
+        </div>
+
+        {/* Scholarships */}
+        <div>
+          <h1 className="text-3xl font-bold text-center mt-15">SCHOLARSHIPS</h1>
+          <div className="mt-5">
+            <Scholar></Scholar>
+          </div>
+        </div>
+
+        {/* Upcoming Batches */}
+        <div className="text-center mt-10">
+          <h1 className="text-sm font-medium">UPCOMING</h1>
+          <h1 className="text-3xl font-bold">GATE 2027 BATCHES</h1>
+          {/* Batch info */}
+          <div>
+            <Batch></Batch>
+          </div>
+        </div>
+
+        {/* Testimonials */}
+        <div className="text-center mt-10 bg-blue-50 pt-10">
+          <h1 className="text-sm font-medium">OUR</h1>
+          <h1 className="text-3xl font-bold">GATE ACHIEVERS</h1>
+          <div>
+            <Testimonials></Testimonials>
+          </div>
+        </div>
+
+        {/* About */}
+        <div>
+          <About></About>
+        </div>
+
+        {/* Footer & Copyright */}
+        <div className="text-lg bg-blue-50 mt-5 flex justify-center text-center p-2 text-gray-600">
+          <p>&copy; All rights reserved to NueroCademy Learning Pvt Ltd.</p>
         </div>
       </div>
     </>
