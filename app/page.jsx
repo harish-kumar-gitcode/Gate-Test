@@ -30,7 +30,26 @@ import Batch from "@/components/batch";
 import Testimonials from "@/components/testimonials";
 import About from "@/components/about";
 
+// State and form handling
+import { useState } from "react";
+
 export default function HomePage() {
+  const [course, setCourse] = useState("");
+
+  const handleSubmit = () => {
+    if (course === "") {
+      alert("Please select a course");
+      return;
+    }
+
+    if (course === "starter") {
+      window.open("https://rzp.io/rzp/NHjoM9M", "_blank");
+    }
+
+    if (course === "professional") {
+      window.open("https://rzp.io/rzp/665XynIK", "_blank");
+    }
+  };
   return (
     <>
       <div>
@@ -95,7 +114,7 @@ export default function HomePage() {
           </div>
 
           {/* Booking Form */}
-          <div className="rounded-md mx-5 h-100 bg-white mt-10" id="booking">
+          <div className="rounded-md mx-5 h-110 bg-white mt-10" id="booking">
             <h1 className="text-center pt-5 font-bold">Book your seat!</h1>
 
             {/* Name */}
@@ -134,7 +153,7 @@ export default function HomePage() {
             {/* Year & Time */}
             <div className="flex gap-5 justify-center mt-5">
               {/* Exam Year */}
-              <select className="p-1 pl-3 rounded-sm border border-gray-200 w-30">
+              <select className="p-1 pl-3 rounded-sm border border-gray-200 w-30 text-gray-500 text-sm">
                 <option value="">Select Exam Year</option>
 
                 {Array.from({ length: 5 }, (_, i) => {
@@ -149,7 +168,7 @@ export default function HomePage() {
               </select>
 
               {/* Time Slots */}
-              <select className="p-1 pl-3 rounded-sm border border-gray-200 w-40">
+              <select className="p-1 pl-3 rounded-sm border border-gray-200 w-30 text-gray-500 text-sm">
                 <option value="">Select Time</option>
 
                 {[
@@ -163,17 +182,33 @@ export default function HomePage() {
                 ))}
               </select>
             </div>
+            <div className="flex justify-center mt-5">
+              <select
+                name="Course"
+                id="course"
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}
+                className="border border-gray-100 w-50 pl-3 p-1 rounded-sm border-gray-200 text-gray-500 text-sm"
+              >
+                <option value="">Select Course</option>
+                <option value="starter">GATE STARTER</option>
+                <option value="professional">GATE PROFESSIONAL</option>
+              </select>
+            </div>
 
             {/* Terms */}
             <div className="flex gap-2 justify-center items-center mt-5">
-              <input type="checkbox" className="scale-125" />
+              <input type="checkbox" className="scale-125" required />
 
               <label>I agree to the terms & conditions</label>
             </div>
 
             {/* Submit */}
             <div className="flex justify-center mt-5">
-              <button className="px-6 py-1 text-lg font-medium text-white bg-blue-600 rounded-md">
+              <button
+                className="px-6 py-1 text-lg font-medium text-white bg-blue-600 rounded-md"
+                onClick={handleSubmit}
+              >
                 Submit
               </button>
             </div>
@@ -190,7 +225,7 @@ export default function HomePage() {
 
             <div className="w-full flex justify-center">
               <button className="mt-2 rounded-md bg-indigo-950 py-1 px-3 text-gray-100">
-                Explore Now
+                <a href="#program">Explore Now</a>
               </button>
             </div>
 
@@ -202,7 +237,7 @@ export default function HomePage() {
 
               <div className="flex justify-center w-full">
                 <button className="mt-2 rounded-md bg-indigo-950 py-1 px-3 text-gray-100">
-                  Check Eligibility
+                  <a href="#scholar">Check Eligibility</a>
                 </button>
               </div>
             </div>
@@ -215,7 +250,7 @@ export default function HomePage() {
 
               <div className="flex justify-center w-full">
                 <button className="mt-2 rounded-md bg-indigo-950 py-1 px-3 text-gray-100">
-                  Book now
+                  <a href="#booking">Book now</a>
                 </button>
               </div>
             </div>
@@ -282,7 +317,7 @@ export default function HomePage() {
         </div>
 
         {/* Access Features */}
-        <div className="bg-blue-50 text-center">
+        <div className="bg-blue-50 text-center" id="program">
           {/* Access heading */}
           <div>
             <h1 className="text-md pt-10 font-medium">GATE COACHING</h1>
@@ -417,7 +452,7 @@ export default function HomePage() {
         </div>
 
         {/* Scholarships */}
-        <div>
+        <div id="scholar">
           <h1 className="text-3xl font-bold text-center mt-15">SCHOLARSHIPS</h1>
           <div className="mt-5">
             <Scholar></Scholar>
