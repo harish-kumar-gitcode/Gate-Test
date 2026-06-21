@@ -6,8 +6,8 @@ export const metadata = {
   title: "Nuero Cademy - Institue for GATE Coaching.",
   description: "Nuero Cademy offers first class opputunity for students.",
   openGraph: {
-    title: "My Website",
-    description: "My awesome website",
+    title: "Nuero Cademy - Institue for GATE Coaching",
+    description: "Nuero Cademy offers first class opputunity for students.",
     images: [
       {
         url: "/logo.png",
