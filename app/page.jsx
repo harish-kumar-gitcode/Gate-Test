@@ -29,6 +29,7 @@ import Scholar from "@/components/scholar";
 import Batch from "@/components/batch";
 import Testimonials from "@/components/testimonials";
 import About from "@/components/about";
+import Footer from "@/components/footer";
 
 // State and form handling
 import { useState } from "react";
@@ -483,8 +484,13 @@ export default function HomePage() {
           <About></About>
         </div>
 
-        {/* Footer & Copyright */}
-        <div className="text-lg bg-blue-50 mt-5 flex justify-center text-center p-2 text-gray-600">
+        {/* Footer */}
+        <div>
+          <Footer></Footer>
+        </div>
+
+        {/*Copyright */}
+        <div className="text-sm bg-blue-50 mt-5 flex justify-center text-center p-2 text-gray-600">
           <p>&copy; All rights reserved to NueroCademy Learning Pvt Ltd.</p>
         </div>
       </div>
